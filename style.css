@@ -1,0 +1,150 @@
+.wrapper {
+  padding: 0 50px 0 50px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+/* .container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #f48033;
+} */
+.container {
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+  background-color: #f48033;
+  margin-bottom: 20px;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  background-color: #f48033;
+}
+.container2 img {
+  width: 350px;
+  align-self: center;
+}
+.container2 img:nth-child(1) {
+  margin-bottom: 10px;
+}
+ol > li {
+  margin-bottom: 20px;
+}
+.opac {
+  opacity: 0.6;
+}
+/* Стили для 10 спсобов размещения элемента в элементе по центру Горизонтально + Вертик */
+/* Стили для оормления */
+.parent {
+  width: 300px;
+  height: 300px;
+  background-color: #090909;
+}
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: #f9e005;
+}
+/*  Стили для позиционирования блоков */
+.p1 {
+  position: relative;
+}
+/* .p1 {
+  position: relative;
+} */
+/* .p1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* 
+  .p1 {
+  display: flex;
+  justify-content: center;
+}
+  .c1{
+  align-self: center;
+} 
+*/
+/* 
+  .p1 {
+  display: flex;
+}
+  .c1 {
+  margin: auto;
+} 
+*/
+/* .p1 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
+/* 
+  .p1 {
+  display: grid;
+  place-items: center;
+} 
+*/
+/* .p1 {
+  display: grid;
+}
+.c1{
+  align-self: center;
+  justify-self: center;
+} */
+/* .p1 {
+  display: grid;
+}
+.c1{
+  place-self: center;
+} */
+.p1 {
+  display: grid;
+}
+.c1 {
+  margin: auto;
+}
+
+/* .c1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+/* .c1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+} */
+/* .c1 {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+} */
+.pos-sticky {
+  font-size: 22px;
+  background-color: #f45a5a;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0 10px;
+  position: sticky;
+  top: 0;
+}
+.pos-relative {
+  position: relative;
+  height: 200vh;
+}

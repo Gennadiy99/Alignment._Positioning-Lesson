@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.6 Выравнивание по центру и анимация</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>5.6 Выравнивание по центру и анимация</h1>
+
+      <p>В этом уроке мы рассмотрим следующие темы:</p>
+      <ol>
+        <li>
+          1. Как выровнять картинку по центру на CSS. Рассмотрим несколько
+          способов, как можно это сделать и вы сможете применить эти методы не
+          только к картинкам, но и к любым элементам на странице.
+        </li>
+        <li>
+          2. Покажу 10 способов как выровнять любой элемент по центру по
+          горизонтали и вертикали.
+        </li>
+        <li>
+          3. Как клонировать GitHub репозиторий и как загрузить код на GitHub не
+          используя терминал. Все будем делать через графический интерфейс
+          редактора VS Code.
+        </li>
+        <li>4. Покажу как сделать анимацию фона на CSS.</li>
+      </ol>
+      <p>
+        <b><i>Материал урока:</i></b>
+      </p>
+      <h3>Выравнивание Картинки в нутри элемента нужно осознавать понятия:</h3>
+      <p>"span" - Строчный элемент</p>
+      <p>"div" - Блочный элемент</p>
+      <p>
+        img - строчный элемент, - зангимает место столько сколько размер
+        картинки.
+      </p>
+      <ul>
+        Для выравнивания картинки по центру прописываем "картинке -
+        <b>img</b
+        >" свойства в CSS:
+        <li><b>display: block;</b></li>
+        <li><b>margin: 0 auto;</b></li>
+      </ul>
+      <pre>
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+      </pre>
+      <img src="Фото Бота.jpg" alt="картинка" />
+      <p>
+        <b><i>Так же можно выравнивать картинку в блоке:</i></b>
+      </p>
+
+      <p>
+        Создаем <u>блок:</u> <b>"container"</b>
+        <u>в него помещаем картинку:</u> - <b>"Фото Бота.jpg"</b>
+      </p>
+      <p>Выравниваем сам блок на середину документа:</p>
+      <ul>
+        <li>Устанавливаем блоку ширину width:</li>
+        <li>Устанавливаем блоку margin:</li>
+        <li class="opac">Устанавливаем блоку background-color:</li>
+      </ul>
+      <pre>
+        .container {
+          width: 800px;
+          margin: 0 auto;
+          <span class="opac">background-color: #f48033;</span>
+        }
+      </pre>
+      <p>Выравниваем картинку в блоке <b>3 способа:</b></p>
+      <ol>
+        <li>
+          Как выше описывалось,задаем
+          <b><u>свойство картинке:</u> "display: block;" "margin: 0 auto;"</b>
+          <pre>
+          img {
+            display: block;
+            margin: 0 auto;
+          }</pre
+          >
+        </li>
+        <li>
+          Картинка остается строчной, задаем
+          <b><u>свойство контейнеру:</u> text-align: center; </b>
+          <pre>
+          .container {
+            <span class="opac">background-color: #f48033;</span>
+            width: 800px;
+            margin: 0 auto;
+            <b>text-align: center;</b>
+          }
+        </pre>
+        </li>
+        <li>
+          Сделать <u>контейнер флексовым</u> <b>"display: flex"</b>:
+          <pre>
+            .container {
+              <b>display: flex;</b>
+              <b>justify-content: center;</b>
+              width: 600px;
+              margin: 0 auto;
+              <span class="opac">background-color: #f48033;</span>
+            }
+          </pre>
+        </li>
+        <div class="container">
+          <img src="Фото Бота.jpg" alt="картинка" />
+        </div>
+        <li>
+          <b>Если</b> установить в одном <b>flex контейнере 2 картинки</b> они
+          <u>станут вряд а не в столбец.</u> поэтому нужно применить св-во:
+          <b>"flex-direction: column;"</b>, а что бы картинки не растягивались
+          вдоль, нужно <u><b>установить для "img"</b></u> св-во:
+          <b>"align-self: center"</b>
+        </li>
+        <div class="container2">
+          <img src="Фото Бота.jpg" alt="картинка" />
+          <img src="Фото Бота.jpg" alt="картинка" />
+        </div>
+      </ol>
+
+      <p>
+        <u>
+          Если хотим прижать картинку внутри блока к правому краю, то нужно
+          прописать картинке стили:
+        </u>
+      </p>
+      <ul>
+        img {
+        <li>display: block;</li>
+        <li><u>margin: 0 0 0 auto;</u></li>
+        }
+      </ul>
+      <p>
+        <u>
+          Что бы прижать картинку с лева внутри блока не нужно указывать ни
+          каких отступов для картинки, эта позиция идет по умолчанию
+        </u>
+
+        >
+      </p>
+
+      <h3>
+        10-ть способов как можно выровнять один элемент в нутри другого по
+        Центру (по Горизонтали и по Вертикали).
+      </h3>
+      <p>
+        Есть 2 Дива, <b>Родительский - "parent p1"</b> и
+        <b>Дочерний - "child c1"</b>, один в нутри другого.
+      </p>
+      <div class="pos-relative">
+        <div class="parent p1">
+          <div class="child c1"></div>
+        </div>
+        <p>Рассмотрим написание стилей для выравнивания по центру:</p>
+        <ol>
+          Для начала установим
+          <u>"p1"</u>
+          -
+          <b>"position: relative;"</b>
+          <u>"c1"</u>
+          -
+          <b>"position: absolute;"</b>
+
+          <div class="pos-sticky">
+            1-вый вариант: <u>"position"</u> transform: translate()
+          </div>
+          <li>
+            Для дочернего элемента укажем свойства:
+            <pre>
+            .c1 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+            }
+          </pre
+            >
+            <ul>
+              <li>
+                <b>transform: translate</b>(-50%,-50%); Двигает элемент
+                относительно своего центра.
+              </li>
+              <li>
+                <b>left: 50%;</b> - Двигает элемент относительно своего левого
+                верхнего угла <u>с лева на право</u>
+              </li>
+              <li>
+                <b>top: 50%;</b> - Двигает элемент относительно своего левого
+                верхнего угла <u>с верху вниз</u>
+              </li>
+            </ul>
+          </li>
+
+          <div class="pos-sticky">
+            2-й вариант: <u>"position"</u> top/ left/ right/ bottom
+          </div>
+
+          <li>
+            Так же для дочернего элемента укажем стили.
+            <pre>
+              .c1 {
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+            }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">
+            3-й вариант: <u>"position"</u> inset: / margin
+          </div>
+          <li>
+            Устанавливаем вместо <u>4х свойств</u>
+            <b>left: 0; top: 0; right: 0; bottom: 0;</b> <u>Одно свойство:</u>
+            <b>inset: 0;</b>
+            <pre>
+              .c1 {
+                position: absolute;
+                inset: 0;
+                margin: auto;
+              }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">
+            4-й вариант: <u>"flex-box" </u> justify-content
+          </div>
+
+          <li>
+            Теперь устанавливаем свойства <b>display: flex;</b> для
+            <b><u>Родительского</u></b> элемента:
+            <pre>
+              .p1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            </pre>
+            <ul>
+              4.a) Выравнивание так же происходит засчет
+              <u>родительского</u>
+              <b>display:flax;</b>
+              <u>и дочернего</u>
+              <b>align-self: center;</b>
+              <li>
+                <pre>
+                  .p1 {
+                    display: flex;
+                    justify-content: center;
+                  }
+                  .c1{
+                    align-self: center;
+                  }
+                </pre>
+              </li>
+            </ul>
+          </li>
+
+          <div class="pos-sticky">5-й вариант: <u>"flex-box"</u> margin:</div>
+
+          <li>
+            Следующий способ тоже через <b>display:flax,</b> но задаются другие
+            стили:
+            <pre>
+              .p1 {
+                display: flex;
+              }
+              .c1 {
+                margin: auto;
+              }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">6-й вариант: <u>"display: grid"</u></div>
+
+          <li>
+            С изпользованием <b>display: grid;</b>
+            <pre>
+              .p1 {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+              }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">
+            7-й вариант: <u>"display: grid"</u> place-items
+          </div>
+          <li>
+            <pre>
+              .p1 { 
+                display: grid; 
+                place-items: center; 
+              }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">
+            8-й вариант: <u>"display: grid"</u> align-self:/justify-self:
+          </div>
+          <li>
+            <pre>
+              .p1 {
+                display: grid;
+              }
+              .c1{
+                align-self: center;
+                justify-self: center;
+              }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">
+            9-й вариант: <u>"display: grid"</u> place-self:
+          </div>
+          <li>
+            <pre>
+              .p1 {
+                display: grid;
+              }
+              .c1{
+                place-self: center;
+              }
+            </pre>
+          </li>
+
+          <div class="pos-sticky">
+            10-й вариант: <u>"display: grid"</u> margin:
+          </div>
+          <li>
+            <pre>
+              .p1 {
+                display: grid;
+              }
+              .c1 {
+                margin: auto;
+              }
+            </pre>
+          </li>
+        </ol>
+        
+      </div>
+    </div>
+  </body>
+</html>
