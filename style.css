@@ -1,5 +1,12 @@
 .wrapper {
-  padding: 0 50px 0 50px;
+  max-width: 960px;
+  padding: 100px 50px;
+  background-color: #bfbebe;
+}
+@media (max-width: 650px) {
+  .wrapper {
+    padding: 15px 10px;
+  }
 }
 img {
   display: block;
@@ -36,9 +43,11 @@ img {
 .container2 img:nth-child(1) {
   margin-bottom: 10px;
 }
+/* всем li из маркированного списка отступ снизу */
 ol > li {
   margin-bottom: 20px;
 }
+/* Стиль для задания прозрачности */
 .opac {
   opacity: 0.6;
 }
@@ -146,5 +155,37 @@ ol > li {
 }
 .pos-relative {
   position: relative;
-  height: 200vh;
+  /* height: 200vh; */
+}
+/* Стили для анимации в CSS */
+.main {
+  height: 500px;
+  background-image: url(abstract-wavy-background.jpg);
+  background-repeat: repeat-x;
+  animation: slide 30s linear infinite;
+  margin-bottom: 20px;
+}
+@keyframes slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.box-text {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+}
+.bg_color_bock_gr {
+  background-color: rgba(33, 126, 33, 0.8);
+}
+.highlight_text{
+  background-color: rgb(70, 242, 234);
+  padding: 2px;
+  font-weight: 600;
 }

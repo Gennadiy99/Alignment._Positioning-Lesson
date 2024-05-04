@@ -349,8 +349,109 @@
             </pre>
           </li>
         </ol>
-        
+
+        <div class="pos-sticky bg_color_bock_gr">
+          Как сделать Анимацию на "CSS"
+        </div>
+
+        <p>
+          Нужно изначаль задать в "CSS" свойства блоку с указанием Высоты, Фона
+          и повтора фона по горизонтали :
+        </p>
+        <pre>
+          .main {
+            height: 500px;
+            background-image: url(abstract-wavy-background.jpg);
+            background-repeat: repeat-x;
+          }
+        </pre>
+        <p>
+          Для движения картинки с лева на право в постоянном режиме нужно
+          <b>использовать в "CSS"</b> <u>такое Свойство как:</u>
+          <b>@keyframes</b> в котором указываются ключевые кадры, на которых
+          происходят какието изменения. Это указывается в процентах: 0% - это
+          начало. Далее описывается каждый этап с указанием изменений стиля.
+        </p>
+        <pre>
+          @keyframes slide {
+            0% {
+              background-position: 0% 0%;
+            }
+            50% {
+              background-position: 100% 0%;
+            }
+            100% {
+              background-position: 0% 0%;
+            }
+          }
+        </pre>
+        <ul>
+          <li>
+            <u>Первый этап</u> - <b>background-position: 0% 0%;</b>- начальная
+            позиция фона.
+          </li>
+          <li>
+            <u>Второй этап</u> - <b>background-position: 100% 0%;</b> - смещение
+            фона по гориз-лин на 100%.
+          </li>
+          <li>
+            <u>Третий этап</u> - <b>background-position: 0% 0%;</b> - смещение
+            фона обратно в исходную позицию.
+          </li>
+        </ul>
+        <p>
+          <b
+            ><i
+              >Для включения анимации нужно указать в Стилях для Блока с
+              фоном:</i
+            ></b
+          >
+          <span class="highlight_text"
+            >animation: slide 30s linear infinite;</span
+          >
+        </p>
+        <ul>
+          <li><b>animation:</b>Свойство анимации.</li>
+          <li>
+            <b>slide</b> - название <u>"@keyframes"</u> которы будет
+            анимироваться.
+          </li>
+          <li><b>30s</b> - Общая длительность анимациию</li>
+          <li><b>linear</b> - линейное ускорение анимации.</li>
+          <li><b>infinite</b> - постоянное повторение анимации.</li>
+          <!-- <li><b></b></li> -->
+        </ul>
+        <p>Теперь код в CSS для анимации блока выглядит так:</p>
+        <pre>
+          .main {
+            height: 500px;
+            background-image: url(abstract-wavy-background.jpg);
+            background-repeat: repeat-x;
+            animation: slide 30s linear infinite;
+          }
+        </pre>
+
+        <div class="main">
+          <div class="box-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            nihil fugiat id minima quaerat praesentium saepe laborum perferendis
+            necessitatibus voluptatem molestias non cum velit amet facilis
+            quibusdam rerum maxime, inventore quo! Velit rem nemo fuga, quidem
+            rerum esse eligendi nobis non sunt dolorem aperiam blanditiis, amet
+            sint ea itaque quas deserunt cumque asperiores! Inventore
+            dignissimos quidem rerum corporis dolores ea nobis. Fuga, cum
+            ratione? Quo, labore voluptas. Fugiat non voluptas sapiente,
+            doloribus porro similique quos expedita excepturi, nesciunt
+            obcaecati magni unde impedit odit molestiae ut tempore quam officiis
+            exercitationem nam et velit nihil? Rerum iusto suscipit
+            reprehenderit praesentium numquam id.
+          </div>
+        </div>
+        <a href="https://www.youtube.com/watch?v=vagLoF1MZac">
+          Ссылка на дополнительное видео по анимации
+          </a>
       </div>
     </div>
+    <!-- ПРОСМОТРЕТЬ ВИДЕО ПО ССЫЛКЕ об Анимации !!! -->
   </body>
 </html>
