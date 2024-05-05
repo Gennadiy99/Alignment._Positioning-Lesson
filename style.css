@@ -161,9 +161,9 @@ ol > li {
 .main {
   height: 500px;
   background-image: url(abstract-wavy-background.jpg);
-  background-repeat: repeat-x;
-  animation: slide 30s linear infinite;
   margin-bottom: 20px;
+  /* background-repeat: repeat-x;
+  animation: slide 30s linear infinite; */
 }
 @keyframes slide {
   0% {
@@ -178,14 +178,29 @@ ol > li {
 }
 .box-text {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 150px;
   color: white;
 }
+/* Стили для оформления блков цветом */
 .bg_color_bock_gr {
   background-color: rgba(33, 126, 33, 0.8);
 }
-.highlight_text{
+.bg_color_bock_blue {
+  background-color: rgba(46, 113, 134, 0.8);
+}
+.highlight_text {
   background-color: rgb(70, 242, 234);
   padding: 2px;
   font-weight: 600;
+}
+/* Свойства по Анимации из YouTube */
+
+.animated {
+  transition-property: bacground-color;
+  transition-duration: 5s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+.animated {
+  transition: bacground-color 5s liner 1s;
 }

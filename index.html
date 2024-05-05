@@ -449,9 +449,59 @@
         </div>
         <a href="https://www.youtube.com/watch?v=vagLoF1MZac">
           Ссылка на дополнительное видео по анимации
-          </a>
+        </a>
+        <h3 class="pos-sticky bg_color_bock_blue">
+          Материал из ссылки на "You tube"
+        </h3>
+        <ul>
+          Существует 4-ре свойства (прописываются в CSS для Класса) отвечающий
+          за Анимацию:
+          <li>
+            <b>transition-property:</b> (Записывается список свойств для
+            анимации)Есть свойство: <b>all</b>Все свойства.
+          </li>
+          <li>
+            <b>transition-duration:</b> (Указывается время для Анимации, s/ms);
+          </li>
+          <li>
+            <b>transition-delay:</b>- (Задержка выполнения Анимации, отриц.знач
+            возможны.)
+          </li>
+          <li>
+            <b>transition-timing-function:</b>(Это временная функция Описывает
+            как анимация будет распределена во времени.) Свойство может
+            принимать 2 вида значений:
+            <ul>
+              <li>linear</li>
+              <li>ease</li>
+              <li>ease-in</li>
+              <li>ease-out</li>
+              <li>ease-in-out</li>
+            </ul>
+            1) вариант вид CSS-кода:
+            <pre>
+              .animated {
+                transition-property: bacground-color;
+                transition-duration: 5s;
+                transition-timing-function: linear;
+                transition-delay: 1s;
+              }
+            </pre>
+            
+          </li>
+          <li>
+            <b>transition:</b> (Сокращенное свойство в которое через пробел
+            можно указать все 4 свойства.)<br>
+            2) Вариант CSS кода:
+            <pre>
+              .animated {
+      transition: bacground-color 5s liner 1s;
+              }
+            </pre>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- ПРОСМОТРЕТЬ ВИДЕО ПО ССЫЛКЕ об Анимации !!! -->
+    <!-- ПРОСМОТРЕТЬ ВИДЕО ПО ССЫЛКЕ об Анимации !!! 8:57-->
   </body>
 </html>
