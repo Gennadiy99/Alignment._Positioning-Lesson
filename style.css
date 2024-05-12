@@ -11,6 +11,10 @@
 img {
   display: block;
   margin: 0 auto;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
 }
 /* .container {
   width: 600px;
@@ -23,7 +27,7 @@ img {
 .container {
   display: flex;
   justify-content: center;
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   background-color: #f48033;
   margin-bottom: 20px;
@@ -32,16 +36,19 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
   background-color: #f48033;
 }
 .container2 img {
-  width: 350px;
+  max-width: 350px;
   align-self: center;
 }
 .container2 img:nth-child(1) {
   margin-bottom: 10px;
+}
+pre{
+  overflow: auto;
 }
 /* всем li из маркированного списка отступ снизу */
 ol > li {
@@ -152,6 +159,7 @@ ol > li {
   margin: 10px 0 10px;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 .pos-relative {
   position: relative;
@@ -162,8 +170,8 @@ ol > li {
   height: 500px;
   background-image: url(abstract-wavy-background.jpg);
   margin-bottom: 20px;
-  /* background-repeat: repeat-x;
-  animation: slide 30s linear infinite; */
+  background-repeat: repeat-x;
+  animation: slide 30s linear infinite;
 }
 @keyframes slide {
   0% {
@@ -195,12 +203,163 @@ ol > li {
 }
 /* Свойства по Анимации из YouTube */
 
-.animated {
-  transition-property: bacground-color;
-  transition-duration: 5s;
+/* .animated__1 {
+  transition-property: background-color;
+  transition-property: all;
+  transition-duration: 3s;
   transition-timing-function: linear;
   transition-delay: 1s;
+} */
+
+/* Самостоятельная работа */
+
+/* Геометрия блоков animated */
+
+.animated__1 {
+  transition: left 5s linear;
 }
-.animated {
-  transition: bacground-color 5s liner 1s;
+.animated__2 {
+  transition: left 5s ease;
+}
+.animated__3 {
+  transition: left 5s ease-in;
+}
+.animated__4 {
+  transition: left 5s ease-out;
+}
+.animated__5 {
+  transition: left 5s ease-in-out;
+}
+.animated_size {
+  width: 250px;
+  height: 100px;
+  position: relative;
+  left: 0;
+}
+/* Цвет блоков animated */
+.animated_color1 {
+  background-color: blue;
+}
+.animated_color2 {
+  background-color: purple;
+}
+.animated_color3 {
+  background-color: rgb(248, 156, 171);
+}
+.animated_color4 {
+  background-color: yellow;
+}
+.animated_color5 {
+  background-color: green;
+}
+/* Анимация блоков  */
+/* new  */
+.box-anima {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #000;
+}
+.box-anima__item {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  left: 0;
+  border: 1px solid #9c0101;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.item1_format {
+  background-color: #a32d2d;
+  transition: all 3s linear;
+  /* transition: left 5s linear 1s; */
+  /* transition: left 5s linear; */
+}
+.item2_format {
+  background-color: #f3f705;
+  transition: all 3s ease;
+}
+.item3_format {
+  background-color: green;
+  transition: all 3s ease-in;
+}
+/*  Закрепление анимации */
+.wrapper-block-anim {
+  min-width: 200px;
+  max-width: 500px;
+  min-height: 300px;
+  background-color: rgb(147, 191, 160);
+  margin-bottom: 15px;
+  padding: 15px 0 0 15px;
+}
+.block-anim-fon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  text-align: center;
+  max-width: 400px;
+  height: 250px;
+  border: 2px solid #e40505;
+  border-radius: 4px;
+  margin: 0 15px 15px 0;
+  background-image: url(abstract-wavy-background.jpg);
+  animation: prob 10s linear infinite;
+}
+.block-anim_keyfr {
+  animation: prob 5s linear infinite alternate;
+  position: relative;
+  transition: all 0.1s linear;
+}
+@keyframes prob {
+  0% {
+    background-position: 0% 0%;
+    top: 0px;
+    left: 0px;
+  }
+  20% {
+    background-position: 25% 0%;
+    top: 100px;
+    left: 75px;
+  }
+  40% {
+    background-position: 50% 0%;
+    top: 20px;
+    left: 135px;
+  }
+  60% {
+    background-position: 75% 0%;
+    top: 100px;
+    left: 185px;
+  }
+  75% {
+    background-position: 50% 0%;
+    top: 30px;
+    left: 220px;
+  }
+  85% {
+    background-position: 25% 0%;
+    top: 100px;
+    left: 245px;
+  }
+  95% {
+    background-position: 15% 0%;
+    top: 50px;
+    left: 260px;
+  }
+  100% {
+    background-position: 0% 0%;
+    top: 100px;
+    left: 275px;
+  }
+}
+/* новое задание, закрепление материала */
+.btn_block-anim {
+  padding: 5px;
+  background-color: #f16a6a;
+  border-radius: 4px;
+  border: 1px solid #fbf8f8;
 }

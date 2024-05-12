@@ -419,6 +419,7 @@
           <li><b>30s</b> - Общая длительность анимациию</li>
           <li><b>linear</b> - линейное ускорение анимации.</li>
           <li><b>infinite</b> - постоянное повторение анимации.</li>
+          <li><b>alternate</b> - возвращение анимации в начальное положение в обр.порядке.</li>
           <!-- <li><b></b></li> -->
         </ul>
         <p>Теперь код в CSS для анимации блока выглядит так:</p>
@@ -447,7 +448,7 @@
             reprehenderit praesentium numquam id.
           </div>
         </div>
-        <a href="https://www.youtube.com/watch?v=vagLoF1MZac">
+        <a href="https://www.youtube.com/watch?v=vagLoF1MZac" target="_blank">
           Ссылка на дополнительное видео по анимации
         </a>
         <h3 class="pos-sticky bg_color_bock_blue">
@@ -487,11 +488,10 @@
                 transition-delay: 1s;
               }
             </pre>
-            
           </li>
           <li>
             <b>transition:</b> (Сокращенное свойство в которое через пробел
-            можно указать все 4 свойства.)<br>
+            можно указать все 4 свойства.)<br />
             2) Вариант CSS кода:
             <pre>
               .animated {
@@ -500,8 +500,33 @@
             </pre>
           </li>
         </ul>
+        <div class="block-animated">
+          <div class="animated__1 animated_size animated_color1">FFF</div>
+          <div class="animated__2 animated_size animated_color2"></div>
+          <div class="animated__3 animated_size animated_color3"></div>
+          <div class="animated__4 animated_size animated_color4"></div>
+          <div class="animated__5 animated_size animated_color5"></div>
+        </div>
+        <button>Анимация</button>
+        <button>Сбросить</button>
       </div>
     </div>
-    <!-- ПРОСМОТРЕТЬ ВИДЕО ПО ССЫЛКЕ об Анимации !!! 8:57-->
+    <!-- Проба еще раз -->
+    <div class="box-anima">
+      <div class="box-anima__item item1_format">Элемент 1</div>
+      <div class="box-anima__item item2_format">Элемент 2</div>
+      <div class="box-anima__item item3_format">Элемент 3</div>
+    </div>
+    <button class="btn">Start</button>
+    <button class="btn">New Start</button>
+    <!-- Закрепление анимации -->
+    <div class="wrapper-block-anim ">
+      <div class="block-anim-fon ">
+        <span class="btn_block-anim">Нажми Меня!</span>
+      </div>
+    </div>
+
+    <!-- ВИДЕО ПО ССЫЛКЕ об Анимации !!! / 23:26 Разьяснение аним.на только js -->
+    <script src="animation.js"></script>
   </body>
 </html>
